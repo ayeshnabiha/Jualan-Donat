@@ -1,0 +1,17 @@
+# ninja log v6
+7	2676	7856732052227349	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+7	2676	7856732052227349	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+7	2676	7856732052227349	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+7	2676	7856732052227349	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+2684	2785	7856732054092554	Progdas-Final-Project_autogen/EWIEGA46WW/qrc_fotoQR.cpp	bf94de68c2c33eee
+2684	2785	7856732054092554	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/EWIEGA46WW/qrc_fotoQR.cpp	bf94de68c2c33eee
+2790	10838	7856732054350705	CMakeFiles/Progdas-Final-Project.dir/main.cpp.obj	939a508aad9ba585
+2786	11192	7856732054286508	CMakeFiles/Progdas-Final-Project.dir/Progdas-Final-Project_autogen/mocs_compilation.cpp.obj	889bf48f847006e1
+2795	11275	7856732054417331	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+2804	11407	7856732054496427	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+11276	11735	7856732139211729	CMakeFiles/Progdas-Final-Project.dir/Progdas-Final-Project_autogen/EWIEGA46WW/qrc_fotoQR.cpp.obj	180484e11a4c771c
+2808	11821	7856732054536509	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+2800	12041	7856732054459644	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+11193	13652	7856732138388351	CMakeFiles/Progdas-Final-Project.dir/customername.cpp.obj	71b5f208988b5904
+10838	14831	7856732134844557	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
+14831	15188	7856732174771551	Progdas-Final-Project.exe	bb96bfbdfbf0fd2

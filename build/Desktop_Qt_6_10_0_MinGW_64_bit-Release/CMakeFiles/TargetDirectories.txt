@@ -1,0 +1,9 @@
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/Progdas-Final-Project.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/edit_cache.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/rebuild_cache.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/list_install_components.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/install.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/install/local.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/install/strip.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/Progdas-Final-Project_autogen_timestamp_deps.dir
+C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/Progdas-Final-Project_autogen.dir

@@ -1,0 +1,25 @@
+{
+	"BUILD_DIR" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project",
+	"CMAKE_SOURCE_DIR" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/frame.png"
+	],
+	"LOCK_FILE" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/Progdas-Final-Project_autogen.dir/AutoRcc_fotoQR_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "fotoQR" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_fotoQR.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.10.0/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/CMakeFiles/Progdas-Final-Project_autogen.dir/AutoRcc_fotoQR_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/fotoQR.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
