@@ -1,17 +1,69 @@
 # ninja log v6
-7	2676	7856732052227349	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
-7	2676	7856732052227349	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
-7	2676	7856732052227349	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
-7	2676	7856732052227349	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+92	722	7856949591563493	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+5661	14987	7856949306133470	CMakeFiles/Progdas-Final-Project.dir/Progdas-Final-Project_autogen/mocs_compilation.cpp.obj	889bf48f847006e1
+92	722	7856949591563493	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+92	722	7856949591563493	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+92	722	7856949591563493	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
 2684	2785	7856732054092554	Progdas-Final-Project_autogen/EWIEGA46WW/qrc_fotoQR.cpp	bf94de68c2c33eee
 2684	2785	7856732054092554	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/EWIEGA46WW/qrc_fotoQR.cpp	bf94de68c2c33eee
-2790	10838	7856732054350705	CMakeFiles/Progdas-Final-Project.dir/main.cpp.obj	939a508aad9ba585
-2786	11192	7856732054286508	CMakeFiles/Progdas-Final-Project.dir/Progdas-Final-Project_autogen/mocs_compilation.cpp.obj	889bf48f847006e1
-2795	11275	7856732054417331	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
-2804	11407	7856732054496427	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+5670	14915	7856949306213422	CMakeFiles/Progdas-Final-Project.dir/main.cpp.obj	939a508aad9ba585
+724	10158	7856949597877717	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+735	10274	7856949598001395	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+10696	11008	7856949697608079	Progdas-Final-Project.exe	bb96bfbdfbf0fd2
 11276	11735	7856732139211729	CMakeFiles/Progdas-Final-Project.dir/Progdas-Final-Project_autogen/EWIEGA46WW/qrc_fotoQR.cpp.obj	180484e11a4c771c
-2808	11821	7856732054536509	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
-2800	12041	7856732054459644	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+741	10557	7856949598042041	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+730	10696	7856949597946833	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+747	10013	7856949598126359	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
 11193	13652	7856732138388351	CMakeFiles/Progdas-Final-Project.dir/customername.cpp.obj	71b5f208988b5904
-10838	14831	7856732134844557	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
-14831	15188	7856732174771551	Progdas-Final-Project.exe	bb96bfbdfbf0fd2
+88	1508	7857587116683645	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+88	1508	7857587116683645	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+88	1508	7857587116683645	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+88	1508	7857587116683645	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+1515	8043	7857587118181573	CMakeFiles/Progdas-Final-Project.dir/main.cpp.obj	939a508aad9ba585
+1535	8128	7857587118380061	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+1520	8478	7857587118233717	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+1510	8533	7857587118131746	CMakeFiles/Progdas-Final-Project.dir/Progdas-Final-Project_autogen/mocs_compilation.cpp.obj	889bf48f847006e1
+8129	8534	7857587184319218	CMakeFiles/Progdas-Final-Project.dir/menu.cpp.obj	51c91fabdaea9ec6
+1530	8552	7857587118325112	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+1525	9467	7857587118273565	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+8043	12170	7857587183461414	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
+12170	12450	7857587224731588	Progdas-Final-Project.exe	900b265434c3042b
+44	297	7857589491574802	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+44	297	7857589491574802	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+44	297	7857589491574802	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+44	297	7857589491574802	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+315	5580	7857589494281518	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
+310	6009	7857589494230015	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+298	6203	7857589494123026	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+306	6236	7857589494200064	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+301	6859	7857589494152680	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+6859	7110	7857589559732257	Progdas-Final-Project.exe	900b265434c3042b
+60	321	7857592267913474	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+60	321	7857592267913474	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+60	321	7857592267913474	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+60	321	7857592267913474	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+342	5850	7857592270756369	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
+337	6254	7857592270702879	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+332	6517	7857592270662781	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+323	6553	7857592270566227	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+328	7390	7857592270566227	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+7390	7568	7857592341247228	Progdas-Final-Project.exe	900b265434c3042b
+51	302	7857593040095860	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+51	302	7857593040095860	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+51	302	7857593040095860	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+51	302	7857593040095860	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+321	5379	7857593042798542	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
+316	5839	7857593042738318	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+303	5903	7857593042613554	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+311	6053	7857593042698183	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+306	6627	7857593042652140	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
+6627	6866	7857593105863982	Progdas-Final-Project.exe	900b265434c3042b
+12	248	7857601610770833	Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+12	248	7857601610770833	Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+12	248	7857601610770833	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/timestamp	8c308987fdb4142d
+12	248	7857601610770833	C:/Users/rizna/Desktop/college/semester 1/PD/Progdas-Final-Project/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/Progdas-Final-Project_autogen/mocs_compilation.cpp	8c308987fdb4142d
+266	5439	7857601613309374	CMakeFiles/Progdas-Final-Project.dir/payment.cpp.obj	586df5a961a7156f
+261	5744	7857601613259524	CMakeFiles/Progdas-Final-Project.dir/nota.cpp.obj	f999f0cef0463df5
+249	5949	7857601613144699	CMakeFiles/Progdas-Final-Project.dir/mainwindow.cpp.obj	558c9857fab07177
+257	6002	7857601613215745	CMakeFiles/Progdas-Final-Project.dir/cart.cpp.obj	3346733e019d34f7
+253	6701	7857601613181010	CMakeFiles/Progdas-Final-Project.dir/menuorder.cpp.obj	be6360c4d909b4ea
