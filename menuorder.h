@@ -2,6 +2,10 @@
 #define MENUORDER_H
 
 #include <QWidget>
+#include <QFile>
+#include <QSpinBox>
+#include <QTextStream>
+#include <QLabel>
 
 namespace Ui
 {
@@ -11,6 +15,7 @@ namespace Ui
 class Cart;
 class Nota;
 class CustomerName;
+class OrderManager;
 class MenuOrder : public QWidget
 {
     Q_OBJECT
@@ -28,6 +33,9 @@ private:
     Ui::MenuOrder *ui;
     Cart *cart;
     Nota *nota;
+    QVector<QLabel*> nameLabels;
+    QVector<QLabel*> priceLabels;
+    QVector<QSpinBox*> qtySpinBoxes;
 };
 
 #endif // MENUORDER_H

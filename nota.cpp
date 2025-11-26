@@ -2,6 +2,7 @@
 #include "ui_nota.h"
 #include "mainwindow.h"
 #include "customername.h"
+#include "ordermanager.h"
 
 Nota::Nota(QWidget *parent)
     : QWidget(parent)
@@ -46,3 +47,38 @@ void Nota::updateCustomerName()
     std::string name = CustomerName::instance().getName();
     ui->label_CustName->setText(QString::fromStdString(name));
 }
+
+void Nota::updateNota() {
+    ui->label_Nota->setText("");
+
+    const auto &orders = OrderManager::instance().getItems();
+    int subtotal = 0;
+
+    QString text;
+
+    text += "-----------------------\n";
+
+    for (const auto &item : orders) {
+        QString line = QString("%1 x %2 = Rp %3\n")
+        .arg(item.name)
+            .arg(item.qty)
+            .arg(item.total());
+        text += line;
+        subtotal += item.total();
+    }
+
+    double taxRate = 0.10;   // 10%
+    int tax = subtotal * taxRate;
+
+    // --- HITUNG TOTAL AKHIR ---
+    int total = subtotal + tax;
+
+    text += "\n-----------------------\n";
+    text += "Subtotal : Rp " + QString::number(subtotal) + "\n";
+    text += "Tax (10%): Rp " + QString::number(tax) + "\n";
+    text += "-----------------------\n";
+    text += "TOTAL    : Rp " + QString::number(total) + "\n";
+
+    ui->label_Nota->setText(text);
+}
+

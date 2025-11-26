@@ -21,6 +21,7 @@ void Payment::setNota(Nota *ptr)
 
 void Payment::on_pushButton_Confirm_clicked()
 {
+    nota->updateNota();
     nota->show();
     this->hide();
 }

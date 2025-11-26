@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QVBoxLayout>
@@ -28,10 +29,11 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *label_WelcomeTag;
     QLabel *label_ShopTag;
+    QListWidget *listWidget;
     QGridLayout *gridLayout_1;
-    QLabel *label_PriceTCB;
     QLabel *label_TCB;
     QSpinBox *spinBox_TCB;
+    QLabel *label_PriceTCB;
     QGridLayout *gridLayout_2;
     QLabel *label_PriceTLR;
     QLabel *label_TLR;
@@ -54,13 +56,13 @@ public:
     {
         if (MenuOrder->objectName().isEmpty())
             MenuOrder->setObjectName("MenuOrder");
-        MenuOrder->resize(358, 280);
+        MenuOrder->resize(358, 352);
         widget = new QWidget(MenuOrder);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(30, 30, 291, 241));
+        widget->setGeometry(QRect(30, 40, 291, 311));
         verticalLayoutWidget = new QWidget(widget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(0, 0, 291, 238));
+        verticalLayoutWidget->setGeometry(QRect(0, 0, 291, 440));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(10);
         verticalLayout->setObjectName("verticalLayout");
@@ -78,20 +80,19 @@ public:
 
         verticalLayout->addWidget(label_ShopTag);
 
+        listWidget = new QListWidget(verticalLayoutWidget);
+        listWidget->setObjectName("listWidget");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(listWidget->sizePolicy().hasHeightForWidth());
+        listWidget->setSizePolicy(sizePolicy);
+
+        verticalLayout->addWidget(listWidget);
+
         gridLayout_1 = new QGridLayout();
         gridLayout_1->setObjectName("gridLayout_1");
         gridLayout_1->setHorizontalSpacing(10);
-        label_PriceTCB = new QLabel(verticalLayoutWidget);
-        label_PriceTCB->setObjectName("label_PriceTCB");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_PriceTCB->sizePolicy().hasHeightForWidth());
-        label_PriceTCB->setSizePolicy(sizePolicy);
-        label_PriceTCB->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        gridLayout_1->addWidget(label_PriceTCB, 0, 1, 1, 1);
-
         label_TCB = new QLabel(verticalLayoutWidget);
         label_TCB->setObjectName("label_TCB");
         label_TCB->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
@@ -108,6 +109,17 @@ public:
 
         gridLayout_1->addWidget(spinBox_TCB, 0, 2, 1, 1);
 
+        label_PriceTCB = new QLabel(verticalLayoutWidget);
+        label_PriceTCB->setObjectName("label_PriceTCB");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label_PriceTCB->sizePolicy().hasHeightForWidth());
+        label_PriceTCB->setSizePolicy(sizePolicy2);
+        label_PriceTCB->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_1->addWidget(label_PriceTCB, 0, 1, 1, 1);
+
 
         verticalLayout->addLayout(gridLayout_1);
 
@@ -116,8 +128,8 @@ public:
         gridLayout_2->setHorizontalSpacing(10);
         label_PriceTLR = new QLabel(verticalLayoutWidget);
         label_PriceTLR->setObjectName("label_PriceTLR");
-        sizePolicy.setHeightForWidth(label_PriceTLR->sizePolicy().hasHeightForWidth());
-        label_PriceTLR->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(label_PriceTLR->sizePolicy().hasHeightForWidth());
+        label_PriceTLR->setSizePolicy(sizePolicy2);
         label_PriceTLR->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(label_PriceTLR, 0, 1, 1, 1);
@@ -143,8 +155,8 @@ public:
         gridLayout_3->setHorizontalSpacing(10);
         label_PriceMRB = new QLabel(verticalLayoutWidget);
         label_PriceMRB->setObjectName("label_PriceMRB");
-        sizePolicy.setHeightForWidth(label_PriceMRB->sizePolicy().hasHeightForWidth());
-        label_PriceMRB->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(label_PriceMRB->sizePolicy().hasHeightForWidth());
+        label_PriceMRB->setSizePolicy(sizePolicy2);
         label_PriceMRB->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_3->addWidget(label_PriceMRB, 0, 1, 1, 1);
@@ -183,8 +195,8 @@ public:
 
         label_PriceACB = new QLabel(verticalLayoutWidget);
         label_PriceACB->setObjectName("label_PriceACB");
-        sizePolicy.setHeightForWidth(label_PriceACB->sizePolicy().hasHeightForWidth());
-        label_PriceACB->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(label_PriceACB->sizePolicy().hasHeightForWidth());
+        label_PriceACB->setSizePolicy(sizePolicy2);
         label_PriceACB->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_4->addWidget(label_PriceACB, 0, 1, 1, 1);
@@ -198,19 +210,19 @@ public:
         gridLayout_5->setHorizontalSpacing(10);
         label_PriceRVCB = new QLabel(verticalLayoutWidget);
         label_PriceRVCB->setObjectName("label_PriceRVCB");
-        sizePolicy.setHeightForWidth(label_PriceRVCB->sizePolicy().hasHeightForWidth());
-        label_PriceRVCB->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(label_PriceRVCB->sizePolicy().hasHeightForWidth());
+        label_PriceRVCB->setSizePolicy(sizePolicy2);
         label_PriceRVCB->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_5->addWidget(label_PriceRVCB, 0, 1, 1, 1);
 
         label_RVCB = new QLabel(verticalLayoutWidget);
         label_RVCB->setObjectName("label_RVCB");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(label_RVCB->sizePolicy().hasHeightForWidth());
-        label_RVCB->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_RVCB->sizePolicy().hasHeightForWidth());
+        label_RVCB->setSizePolicy(sizePolicy3);
         label_RVCB->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
 
         gridLayout_5->addWidget(label_RVCB, 0, 0, 1, 1);
@@ -241,8 +253,8 @@ public:
         MenuOrder->setWindowTitle(QCoreApplication::translate("MenuOrder", "Form", nullptr));
         label_WelcomeTag->setText(QString());
         label_ShopTag->setText(QCoreApplication::translate("MenuOrder", "DOPIYO'S MENU \360\235\234\227\340\247\216", nullptr));
-        label_PriceTCB->setText(QCoreApplication::translate("MenuOrder", "@20k", nullptr));
         label_TCB->setText(QCoreApplication::translate("MenuOrder", "Tripple Choco Boom", nullptr));
+        label_PriceTCB->setText(QCoreApplication::translate("MenuOrder", "@20k", nullptr));
         label_PriceTLR->setText(QCoreApplication::translate("MenuOrder", "@25k", nullptr));
         label_TLR->setText(QCoreApplication::translate("MenuOrder", "Tiramisu Lotus Ring", nullptr));
         label_PriceMRB->setText(QCoreApplication::translate("MenuOrder", "@30k", nullptr));

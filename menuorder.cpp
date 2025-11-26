@@ -2,12 +2,60 @@
 #include "ui_menuorder.h"
 #include "cart.h"
 #include "customername.h"
+#include "ordermanager.h"
 
 MenuOrder::MenuOrder(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MenuOrder)
 {
     ui->setupUi(this);
+
+    QFile file("menu.txt");
+    if (file.open(QIODevice::ReadOnly)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+
+            QStringList parts = line.split(",");
+            if (parts.size() < 2) continue;
+
+            QString menuName = parts[0];
+            QString price = parts[1];
+
+            // --- Buat widget container ---
+            QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+            QWidget *rowWidget = new QWidget;
+
+            QLabel *labelName = new QLabel(menuName);
+            labelName->setFixedWidth(150);
+
+            QLabel *labelPrice = new QLabel("Rp " + price);
+            labelPrice->setFixedWidth(80);
+
+            // SpinBox qty menu
+            QSpinBox *spin = new QSpinBox;
+            spin->setRange(0, 10);
+            spin->setFixedWidth(50);
+
+            nameLabels.append(labelName);
+            priceLabels.append(labelPrice);
+            qtySpinBoxes.append(spin);
+
+            QHBoxLayout *layout = new QHBoxLayout(rowWidget);
+            layout->addWidget(labelName);
+            layout->addWidget(labelPrice);
+            layout->addStretch();
+            layout->addWidget(spin);
+
+            rowWidget->setLayout(layout);
+
+            // --- Masukkan widget ke dalam list widget ---
+            item->setSizeHint(rowWidget->sizeHint());
+
+            ui->listWidget->setItemWidget(item, rowWidget);
+        }
+    }
+
     cart = new Cart();
 }
 
@@ -23,40 +71,26 @@ void MenuOrder::setCart(Cart *ptr)
 
 void MenuOrder::on_pushButton_OK_clicked()
 {
-    QVector<OrderItem> items;
+    OrderManager::instance().clear();
 
-    OrderItem TCB;
-    TCB.name = ui->label_TCB ->text();
-    TCB.quantity = ui->spinBox_TCB->value();
-    TCB.price = 20;
-    if (TCB.quantity > 0) items.push_back(TCB);
+    for (int i = 0; i < nameLabels.size(); i++) {
+        int qty = qtySpinBoxes[i]->value();
+        if (qty > 0) {
+            OrderItem item;
 
-    OrderItem TLR;
-    TLR.name = ui->label_TLR ->text();
-    TLR.quantity = ui->spinBox_TLR->value();
-    TLR.price = 25;
-    if (TLR.quantity > 0) items.push_back(TLR);
+            item.name = nameLabels[i]->text();
 
-    OrderItem MRB;
-    MRB.name = ui->label_MRB ->text();
-    MRB.quantity = ui->spinBox_MRB->value();
-    MRB.price = 30;
-    if (MRB.quantity > 0) items.push_back(MRB);
+            QString p = priceLabels[i]->text();   // Contoh: "Rp 15000"
+            p.remove("Rp ");                      // Jadi: "15000"
+            item.price = p.toInt();               // 15000 (benar)
 
-    OrderItem ACB;
-    ACB.name = ui->label_ACB ->text();
-    ACB.quantity = ui->spinBox_ACB->value();
-    ACB.price = 20;
-    if (ACB.quantity > 0) items.push_back(ACB);
+            item.qty = qty;
 
-    OrderItem RVCB;
-    RVCB.name = ui->label_RVCB ->text();
-    RVCB.quantity = ui->spinBox_RVCB->value();
-    RVCB.price = 25;
-    if (RVCB.quantity > 0) items.push_back(RVCB);
+            OrderManager::instance().addItem(item);
+        }
+    }
 
-    cart->setOrderItems(items);
-
+    cart->updateUI();
     cart->show();
     this->hide();
 }

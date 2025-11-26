@@ -14,13 +14,29 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets)
 
 add_executable(Progdas-Final-Project
   main.cpp
-  mainwindow.h mainwindow.cpp mainwindow.ui
-  menuorder.h menuorder.cpp menuorder.ui
-  cart.h cart.cpp cart.ui
-  nota.h nota.cpp nota.ui
-  payment.h payment.cpp payment.ui
+  mainwindow.h
+  mainwindow.cpp
+  mainwindow.ui
+
+  menuorder.h
+  menuorder.cpp
+  menuorder.ui
+
+  cart.h
+  cart.cpp
+  cart.ui
+
+  nota.h
+  nota.cpp
+  nota.ui
+
+  payment.h
+  payment.cpp
+  payment.ui
+
   fotoQR.qrc
   customername.h customername.cpp
+  ordermanager.h ordermanager.cpp
 )
 target_link_libraries(Progdas-Final-Project PRIVATE
   Qt${QT_VERSION_MAJOR}::Core

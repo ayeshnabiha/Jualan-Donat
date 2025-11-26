@@ -12,6 +12,7 @@ class Nota;
 
 class MainWindow;
 class CustomerName;
+class OrderManager;
 class Nota : public QWidget
 {
     Q_OBJECT
@@ -21,6 +22,7 @@ public:
     ~Nota();
     void setCustomerName(const QString &name);
     void updateCustomerName();
+    void updateNota();
 
 
 private slots:

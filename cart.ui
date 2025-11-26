@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>333</width>
+    <width>330</width>
     <height>319</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <x>60</x>
      <y>70</y>
      <width>211</width>
-     <height>122</height>
+     <height>140</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -40,6 +40,9 @@
      </widget>
     </item>
     <item>
+     <widget class="QListWidget" name="listWidget"/>
+    </item>
+    <item>
      <widget class="QLabel" name="label_Empty">
       <property name="text">
        <string/>
@@ -50,7 +53,7 @@
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_Items" stretch="">
+     <layout class="QVBoxLayout" name="verticalLayout_Items">
       <property name="spacing">
        <number>5</number>
       </property>

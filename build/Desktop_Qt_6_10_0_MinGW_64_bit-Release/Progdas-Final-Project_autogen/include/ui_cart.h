@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -24,6 +25,7 @@ public:
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_CartTag;
+    QListWidget *listWidget;
     QLabel *label_Empty;
     QVBoxLayout *verticalLayout_Items;
     QPushButton *pushButton_Back;
@@ -33,10 +35,10 @@ public:
     {
         if (Cart->objectName().isEmpty())
             Cart->setObjectName("Cart");
-        Cart->resize(333, 319);
+        Cart->resize(330, 319);
         verticalLayoutWidget_2 = new QWidget(Cart);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(60, 70, 211, 122));
+        verticalLayoutWidget_2->setGeometry(QRect(60, 70, 211, 140));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(5);
         verticalLayout_2->setObjectName("verticalLayout_2");
@@ -47,6 +49,11 @@ public:
         label_CartTag->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_2->addWidget(label_CartTag);
+
+        listWidget = new QListWidget(verticalLayoutWidget_2);
+        listWidget->setObjectName("listWidget");
+
+        verticalLayout_2->addWidget(listWidget);
 
         label_Empty = new QLabel(verticalLayoutWidget_2);
         label_Empty->setObjectName("label_Empty");

@@ -2,6 +2,7 @@
 #include "ui_cart.h"
 #include "menuorder.h"
 #include "payment.h"
+#include "ordermanager.h"
 
 Cart::Cart(QWidget *parent)
     : QWidget(parent)
@@ -38,39 +39,29 @@ void Cart::on_pushButton_Back_clicked()
     this->hide();
 }
 
-void Cart::setOrderItems(const QVector<OrderItem> &items)
-{
-    orderItems = items;
-    updateUI();
-}
-
 void Cart::updateUI()
 {
-    if (orderItems.isEmpty()) {
+    ui->listWidget->clear();
+
+    if (OrderManager::instance().getItems().isEmpty()) {
         ui->label_Empty->setText("Oh no! Your cart is empty\n Please select at least one item of our menu");
         ui->label_Empty->show();
-
         ui->pushButton_Confirm->hide();
+        return;
     } else {
         ui->label_Empty->hide();
         ui->pushButton_Confirm->show();
     }
 
-    QLayoutItem *child;
-    while ((child = ui->verticalLayout_Items->takeAt(0)) != nullptr) {
-        delete child->widget();
-        delete child;
-    }
+    const auto &orders = OrderManager::instance().getItems();
 
-    for (const OrderItem &item : orderItems)
-    {
-        QLabel *label = new QLabel(this);
-        label->setText(QString("%1 x%2 - Rp%3K")
-                           .arg(item.name)
-                           .arg(item.quantity)
-                           .arg(item.price * item.quantity));
-
-        ui->verticalLayout_Items->addWidget(label);
+    for (const auto &item : orders) {
+        ui->listWidget->addItem(
+            QString("%1 x %2 = %3")
+                .arg(item.name)
+                .arg(item.qty)
+                .arg(item.total())
+            );
     }
 }
 

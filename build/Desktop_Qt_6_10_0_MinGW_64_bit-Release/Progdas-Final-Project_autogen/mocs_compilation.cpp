@@ -3,4 +3,5 @@
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_menuorder.cpp"
 #include "EWIEGA46WW/moc_nota.cpp"
+#include "EWIEGA46WW/moc_ordermanager.cpp"
 #include "EWIEGA46WW/moc_payment.cpp"

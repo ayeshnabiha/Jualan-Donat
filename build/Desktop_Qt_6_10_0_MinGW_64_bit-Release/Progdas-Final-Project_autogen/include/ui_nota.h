@@ -30,16 +30,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_Cust;
     QLabel *label_CustName;
-    QVBoxLayout *verticalLayout_3;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_Nota_4;
-    QLabel *label_Nota_9;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_Nota_5;
-    QLabel *label_Nota_8;
-    QHBoxLayout *horizontalLayout_5;
-    QLabel *label_Nota_6;
-    QLabel *label_Nota_7;
+    QLabel *label_Nota;
     QLabel *label_FN;
     QLabel *label_FN2;
     QLabel *label_FNInsta;
@@ -49,10 +40,10 @@ public:
     {
         if (Nota->objectName().isEmpty())
             Nota->setObjectName("Nota");
-        Nota->resize(276, 300);
+        Nota->resize(317, 344);
         verticalLayoutWidget_2 = new QWidget(Nota);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 211, 261));
+        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 261, 281));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(1);
         verticalLayout_2->setObjectName("verticalLayout_2");
@@ -124,88 +115,16 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_2);
 
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
+        label_Nota = new QLabel(verticalLayoutWidget_2);
+        label_Nota->setObjectName("label_Nota");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(label_Nota->sizePolicy().hasHeightForWidth());
+        label_Nota->setSizePolicy(sizePolicy1);
+        label_Nota->setFont(font1);
 
-        verticalLayout_2->addLayout(verticalLayout_3);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalLayout_3->setSizeConstraint(QLayout::SizeConstraint::SetNoConstraint);
-        label_Nota_4 = new QLabel(verticalLayoutWidget_2);
-        label_Nota_4->setObjectName("label_Nota_4");
-        sizePolicy.setHeightForWidth(label_Nota_4->sizePolicy().hasHeightForWidth());
-        label_Nota_4->setSizePolicy(sizePolicy);
-        label_Nota_4->setMinimumSize(QSize(0, 20));
-        label_Nota_4->setFont(font1);
-        label_Nota_4->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
-
-        horizontalLayout_3->addWidget(label_Nota_4);
-
-        label_Nota_9 = new QLabel(verticalLayoutWidget_2);
-        label_Nota_9->setObjectName("label_Nota_9");
-        sizePolicy.setHeightForWidth(label_Nota_9->sizePolicy().hasHeightForWidth());
-        label_Nota_9->setSizePolicy(sizePolicy);
-        label_Nota_9->setMinimumSize(QSize(0, 20));
-        label_Nota_9->setFont(font1);
-        label_Nota_9->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
-
-        horizontalLayout_3->addWidget(label_Nota_9);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_3);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        horizontalLayout_4->setSizeConstraint(QLayout::SizeConstraint::SetNoConstraint);
-        label_Nota_5 = new QLabel(verticalLayoutWidget_2);
-        label_Nota_5->setObjectName("label_Nota_5");
-        sizePolicy.setHeightForWidth(label_Nota_5->sizePolicy().hasHeightForWidth());
-        label_Nota_5->setSizePolicy(sizePolicy);
-        label_Nota_5->setMinimumSize(QSize(0, 20));
-        label_Nota_5->setFont(font1);
-        label_Nota_5->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
-
-        horizontalLayout_4->addWidget(label_Nota_5);
-
-        label_Nota_8 = new QLabel(verticalLayoutWidget_2);
-        label_Nota_8->setObjectName("label_Nota_8");
-        sizePolicy.setHeightForWidth(label_Nota_8->sizePolicy().hasHeightForWidth());
-        label_Nota_8->setSizePolicy(sizePolicy);
-        label_Nota_8->setMinimumSize(QSize(0, 20));
-        label_Nota_8->setFont(font1);
-        label_Nota_8->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
-
-        horizontalLayout_4->addWidget(label_Nota_8);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_4);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        horizontalLayout_5->setSizeConstraint(QLayout::SizeConstraint::SetNoConstraint);
-        label_Nota_6 = new QLabel(verticalLayoutWidget_2);
-        label_Nota_6->setObjectName("label_Nota_6");
-        sizePolicy.setHeightForWidth(label_Nota_6->sizePolicy().hasHeightForWidth());
-        label_Nota_6->setSizePolicy(sizePolicy);
-        label_Nota_6->setMinimumSize(QSize(0, 20));
-        label_Nota_6->setFont(font1);
-        label_Nota_6->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
-
-        horizontalLayout_5->addWidget(label_Nota_6);
-
-        label_Nota_7 = new QLabel(verticalLayoutWidget_2);
-        label_Nota_7->setObjectName("label_Nota_7");
-        sizePolicy.setHeightForWidth(label_Nota_7->sizePolicy().hasHeightForWidth());
-        label_Nota_7->setSizePolicy(sizePolicy);
-        label_Nota_7->setMinimumSize(QSize(0, 20));
-        label_Nota_7->setFont(font1);
-        label_Nota_7->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
-
-        horizontalLayout_5->addWidget(label_Nota_7);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_5);
+        verticalLayout_2->addWidget(label_Nota);
 
         label_FN = new QLabel(verticalLayoutWidget_2);
         label_FN->setObjectName("label_FN");
@@ -256,12 +175,7 @@ public:
         label_Time->setText(QString());
         label_Cust->setText(QCoreApplication::translate("Nota", "Customer", nullptr));
         label_CustName->setText(QString());
-        label_Nota_4->setText(QCoreApplication::translate("Nota", "Subtotal", nullptr));
-        label_Nota_9->setText(QString());
-        label_Nota_5->setText(QCoreApplication::translate("Nota", "TAX(10%)", nullptr));
-        label_Nota_8->setText(QString());
-        label_Nota_6->setText(QCoreApplication::translate("Nota", "Total ", nullptr));
-        label_Nota_7->setText(QString());
+        label_Nota->setText(QString());
         label_FN->setText(QCoreApplication::translate("Nota", "Thank you for your purchase!", nullptr));
         label_FN2->setText(QCoreApplication::translate("Nota", "Have a nice day <3", nullptr));
         label_FNInsta->setText(QCoreApplication::translate("Nota", "instagram @dopiyosdonut", nullptr));
