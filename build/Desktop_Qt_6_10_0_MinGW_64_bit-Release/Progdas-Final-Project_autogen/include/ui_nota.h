@@ -31,19 +31,19 @@ public:
     QLabel *label_Cust;
     QLabel *label_CustName;
     QLabel *label_Nota;
-    QLabel *label_FN;
-    QLabel *label_FN2;
-    QLabel *label_FNInsta;
+    QLabel *label_Tag;
+    QLabel *label_Tag2;
+    QLabel *label_IG;
     QPushButton *pushButton_Print;
 
     void setupUi(QWidget *Nota)
     {
         if (Nota->objectName().isEmpty())
             Nota->setObjectName("Nota");
-        Nota->resize(317, 344);
+        Nota->resize(354, 395);
         verticalLayoutWidget_2 = new QWidget(Nota);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 261, 281));
+        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 291, 331));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(1);
         verticalLayout_2->setObjectName("verticalLayout_2");
@@ -55,7 +55,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_Main->sizePolicy().hasHeightForWidth());
         label_Main->setSizePolicy(sizePolicy);
-        label_Main->setMinimumSize(QSize(0, 20));
+        label_Main->setMinimumSize(QSize(0, 30));
         QFont font;
         font.setFamilies({QString::fromUtf8("Palatino Linotype")});
         label_Main->setFont(font);
@@ -68,7 +68,7 @@ public:
         label_Adress->setObjectName("label_Adress");
         sizePolicy.setHeightForWidth(label_Adress->sizePolicy().hasHeightForWidth());
         label_Adress->setSizePolicy(sizePolicy);
-        label_Adress->setMinimumSize(QSize(0, 10));
+        label_Adress->setMinimumSize(QSize(0, 20));
         label_Adress->setFont(font);
         label_Adress->setFrameShape(QFrame::Shape::NoFrame);
         label_Adress->setFrameShadow(QFrame::Shadow::Raised);
@@ -80,7 +80,7 @@ public:
         label_Time->setObjectName("label_Time");
         sizePolicy.setHeightForWidth(label_Time->sizePolicy().hasHeightForWidth());
         label_Time->setSizePolicy(sizePolicy);
-        label_Time->setMinimumSize(QSize(0, 20));
+        label_Time->setMinimumSize(QSize(0, 15));
         label_Time->setFont(font);
         label_Time->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -108,7 +108,7 @@ public:
         label_CustName->setSizePolicy(sizePolicy);
         label_CustName->setMinimumSize(QSize(0, 20));
         label_CustName->setFont(font1);
-        label_CustName->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_CustName->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_CustName);
 
@@ -117,44 +117,51 @@ public:
 
         label_Nota = new QLabel(verticalLayoutWidget_2);
         label_Nota->setObjectName("label_Nota");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(label_Nota->sizePolicy().hasHeightForWidth());
         label_Nota->setSizePolicy(sizePolicy1);
+        label_Nota->setMinimumSize(QSize(0, 100));
         label_Nota->setFont(font1);
 
         verticalLayout_2->addWidget(label_Nota);
 
-        label_FN = new QLabel(verticalLayoutWidget_2);
-        label_FN->setObjectName("label_FN");
-        sizePolicy.setHeightForWidth(label_FN->sizePolicy().hasHeightForWidth());
-        label_FN->setSizePolicy(sizePolicy);
-        label_FN->setMinimumSize(QSize(0, 5));
-        label_FN->setFont(font);
-        label_FN->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_Tag = new QLabel(verticalLayoutWidget_2);
+        label_Tag->setObjectName("label_Tag");
+        sizePolicy.setHeightForWidth(label_Tag->sizePolicy().hasHeightForWidth());
+        label_Tag->setSizePolicy(sizePolicy);
+        label_Tag->setMinimumSize(QSize(0, 15));
+        label_Tag->setFont(font);
+        label_Tag->setFrameShape(QFrame::Shape::NoFrame);
+        label_Tag->setFrameShadow(QFrame::Shadow::Raised);
+        label_Tag->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_2->addWidget(label_FN);
+        verticalLayout_2->addWidget(label_Tag);
 
-        label_FN2 = new QLabel(verticalLayoutWidget_2);
-        label_FN2->setObjectName("label_FN2");
-        sizePolicy.setHeightForWidth(label_FN2->sizePolicy().hasHeightForWidth());
-        label_FN2->setSizePolicy(sizePolicy);
-        label_FN2->setMinimumSize(QSize(0, 5));
-        label_FN2->setFont(font);
-        label_FN2->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_Tag2 = new QLabel(verticalLayoutWidget_2);
+        label_Tag2->setObjectName("label_Tag2");
+        sizePolicy.setHeightForWidth(label_Tag2->sizePolicy().hasHeightForWidth());
+        label_Tag2->setSizePolicy(sizePolicy);
+        label_Tag2->setMinimumSize(QSize(0, 15));
+        label_Tag2->setFont(font);
+        label_Tag2->setFrameShape(QFrame::Shape::NoFrame);
+        label_Tag2->setFrameShadow(QFrame::Shadow::Raised);
+        label_Tag2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_2->addWidget(label_FN2);
+        verticalLayout_2->addWidget(label_Tag2);
 
-        label_FNInsta = new QLabel(verticalLayoutWidget_2);
-        label_FNInsta->setObjectName("label_FNInsta");
-        sizePolicy.setHeightForWidth(label_FNInsta->sizePolicy().hasHeightForWidth());
-        label_FNInsta->setSizePolicy(sizePolicy);
-        label_FNInsta->setMinimumSize(QSize(0, 20));
-        label_FNInsta->setFont(font);
-        label_FNInsta->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_IG = new QLabel(verticalLayoutWidget_2);
+        label_IG->setObjectName("label_IG");
+        sizePolicy.setHeightForWidth(label_IG->sizePolicy().hasHeightForWidth());
+        label_IG->setSizePolicy(sizePolicy);
+        label_IG->setMinimumSize(QSize(0, 15));
+        label_IG->setFont(font);
+        label_IG->setFrameShape(QFrame::Shape::NoFrame);
+        label_IG->setFrameShadow(QFrame::Shadow::Raised);
+        label_IG->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_2->addWidget(label_FNInsta);
+        verticalLayout_2->addWidget(label_IG);
 
         pushButton_Print = new QPushButton(verticalLayoutWidget_2);
         pushButton_Print->setObjectName("pushButton_Print");
@@ -176,9 +183,9 @@ public:
         label_Cust->setText(QCoreApplication::translate("Nota", "Customer", nullptr));
         label_CustName->setText(QString());
         label_Nota->setText(QString());
-        label_FN->setText(QCoreApplication::translate("Nota", "Thank you for your purchase!", nullptr));
-        label_FN2->setText(QCoreApplication::translate("Nota", "Have a nice day <3", nullptr));
-        label_FNInsta->setText(QCoreApplication::translate("Nota", "instagram @dopiyosdonut", nullptr));
+        label_Tag->setText(QCoreApplication::translate("Nota", "Thank you for your purchase!", nullptr));
+        label_Tag2->setText(QCoreApplication::translate("Nota", "Have a nice day <3", nullptr));
+        label_IG->setText(QCoreApplication::translate("Nota", "instagram @dopiyodonut", nullptr));
         pushButton_Print->setText(QCoreApplication::translate("Nota", "Print", nullptr));
     } // retranslateUi
 

@@ -46,9 +46,11 @@ void Cart::updateUI()
     if (OrderManager::instance().getItems().isEmpty()) {
         ui->label_Empty->setText("Oh no! Your cart is empty\n Please select at least one item of our menu");
         ui->label_Empty->show();
+        ui->listWidget->hide();
         ui->pushButton_Confirm->hide();
         return;
     } else {
+        ui->listWidget->show();
         ui->label_Empty->hide();
         ui->pushButton_Confirm->show();
     }

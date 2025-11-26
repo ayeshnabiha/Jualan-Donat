@@ -28,6 +28,13 @@ void MainWindow::setNota(Nota *ptr) {
 void MainWindow::on_pushButton_OK_clicked()
 {
     QString qName = ui->lineEdit_EnterName->text();
+    if(qName.isEmpty()) {
+        ui->lineEdit_EnterName->setPlaceholderText("...");
+    return;
+    }
+
+    ui->lineEdit_EnterName->setStyleSheet("");
+
     CustomerName::instance().setName(qName.toStdString());
     if(menuOrder) {
         menuOrder->updateCustomerName();

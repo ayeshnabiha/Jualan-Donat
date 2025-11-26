@@ -25,9 +25,8 @@ public:
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_CartTag;
-    QListWidget *listWidget;
     QLabel *label_Empty;
-    QVBoxLayout *verticalLayout_Items;
+    QListWidget *listWidget;
     QPushButton *pushButton_Back;
     QPushButton *pushButton_Confirm;
 
@@ -35,14 +34,14 @@ public:
     {
         if (Cart->objectName().isEmpty())
             Cart->setObjectName("Cart");
-        Cart->resize(330, 319);
+        Cart->resize(295, 369);
         verticalLayoutWidget_2 = new QWidget(Cart);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(60, 70, 211, 140));
+        verticalLayoutWidget_2->setGeometry(QRect(30, 60, 231, 221));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(5);
         verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout_2->setSizeConstraint(QLayout::SizeConstraint::SetMinimumSize);
+        verticalLayout_2->setSizeConstraint(QLayout::SizeConstraint::SetDefaultConstraint);
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         label_CartTag = new QLabel(verticalLayoutWidget_2);
         label_CartTag->setObjectName("label_CartTag");
@@ -50,22 +49,22 @@ public:
 
         verticalLayout_2->addWidget(label_CartTag);
 
-        listWidget = new QListWidget(verticalLayoutWidget_2);
-        listWidget->setObjectName("listWidget");
-
-        verticalLayout_2->addWidget(listWidget);
-
         label_Empty = new QLabel(verticalLayoutWidget_2);
         label_Empty->setObjectName("label_Empty");
         label_Empty->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_2->addWidget(label_Empty);
 
-        verticalLayout_Items = new QVBoxLayout();
-        verticalLayout_Items->setSpacing(5);
-        verticalLayout_Items->setObjectName("verticalLayout_Items");
+        listWidget = new QListWidget(verticalLayoutWidget_2);
+        listWidget->setObjectName("listWidget");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(listWidget->sizePolicy().hasHeightForWidth());
+        listWidget->setSizePolicy(sizePolicy);
+        listWidget->setMinimumSize(QSize(30, 0));
 
-        verticalLayout_2->addLayout(verticalLayout_Items);
+        verticalLayout_2->addWidget(listWidget);
 
         pushButton_Back = new QPushButton(verticalLayoutWidget_2);
         pushButton_Back->setObjectName("pushButton_Back");
@@ -77,6 +76,7 @@ public:
 
         verticalLayout_2->addWidget(pushButton_Confirm);
 
+        verticalLayout_2->setStretch(2, 1);
 
         retranslateUi(Cart);
 

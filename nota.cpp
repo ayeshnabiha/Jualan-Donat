@@ -59,10 +59,10 @@ void Nota::updateNota() {
 
     QString text;
 
-    text += "-----------------------\n";
+    text += "--------------------------------\n\n";
 
     for (const auto &item : orders) {
-        QString line = QString("%1 x %2 = Rp %3\n")
+        QString line = QString("%1 x %2   Rp %3\n")
         .arg(item.name)
             .arg(item.qty)
             .arg(item.total());
@@ -70,16 +70,16 @@ void Nota::updateNota() {
         subtotal += item.total();
     }
 
-    double taxRate = 0.10;   // 10%
+    double taxRate = 0.10;
     int tax = subtotal * taxRate;
 
     // --- HITUNG TOTAL AKHIR ---
     int total = subtotal + tax;
 
-    text += "\n-----------------------\n";
+    text += "\n-------------------------------\n";
     text += "Subtotal : Rp " + QString::number(subtotal) + "\n";
     text += "Tax (10%): Rp " + QString::number(tax) + "\n";
-    text += "-----------------------\n";
+    text += "--------------------------------\n";
     text += "TOTAL    : Rp " + QString::number(total) + "\n";
 
     ui->label_Nota->setText(text);
