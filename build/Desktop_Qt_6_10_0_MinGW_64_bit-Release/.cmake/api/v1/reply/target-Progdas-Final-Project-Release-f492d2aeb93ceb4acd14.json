@@ -34,7 +34,9 @@
 			"C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
 			"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
-			"C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake"
+			"C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake",
+			"C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -50,7 +52,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 47,
+				"line" : 49,
 				"parent" : 0
 			},
 			{
@@ -170,6 +172,32 @@
 				"file" : 6,
 				"line" : 61,
 				"parent" : 23
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 315,
+				"parent" : 4
+			},
+			{
+				"file" : 12,
+				"parent" : 25
+			},
+			{
+				"command" : 4,
+				"file" : 12,
+				"line" : 52,
+				"parent" : 26
+			},
+			{
+				"file" : 11,
+				"parent" : 27
+			},
+			{
+				"command" : 3,
+				"file" : 11,
+				"line" : 61,
+				"parent" : 28
 			}
 		]
 	},
@@ -199,6 +227,10 @@
 				{
 					"backtrace" : 3,
 					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "QT_PRINTSUPPORT_LIB"
 				},
 				{
 					"backtrace" : 3,
@@ -259,6 +291,11 @@
 					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.10.0/mingw_64/include/QtGui"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.10.0/mingw_64/include/QtPrintSupport"
 				}
 			],
 			"language" : "CXX",
@@ -325,6 +362,11 @@
 			},
 			{
 				"backtrace" : 3,
+				"fragment" : "C:\\Qt\\6.10.0\\mingw_64\\lib\\libQt6PrintSupport.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
 				"fragment" : "C:\\Qt\\6.10.0\\mingw_64\\lib\\libQt6Widgets.a",
 				"role" : "libraries"
 			},
@@ -366,6 +408,16 @@
 			{
 				"backtrace" : 24,
 				"fragment" : "-ld3d12",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 29,
+				"fragment" : "-lcomdlg32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 29,
+				"fragment" : "-lwinspool",
 				"role" : "libraries"
 			},
 			{

@@ -17,6 +17,9 @@ Nota::Nota(QWidget *parent)
     timer->start(1000);
 
     updateTime();
+
+    connect(ui->pushButton_Print, &QPushButton::clicked, this, &Nota::saveAsPDF);
+
 }
 
 Nota::~Nota()
@@ -81,4 +84,41 @@ void Nota::updateNota() {
 
     ui->label_Nota->setText(text);
 }
+
+void Nota::saveAsPDF() {
+    QString fileName = QFileDialog::getSaveFileName(
+        this,
+        "Save Nota as PDF",
+        "",
+        "PDF Files (*.pdf)"
+        );
+
+    if (fileName.isEmpty()) return;
+
+    QPrinter printer(QPrinter::HighResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setOutputFileName(fileName);
+
+    printer.setPageMargins(QMarginsF(10, 10, 10, 10));
+    QPainter painter(&printer);
+
+    // Ambil FULL tampilan nota
+    QWidget *widget = this;
+
+    QRectF page = printer.pageRect(QPrinter::DevicePixel);
+
+    double xscale = page.width() / double(widget->width());
+    double yscale = page.height() / double(widget->height());
+    double scale = qMin(xscale, yscale);
+
+    painter.scale(scale, scale);
+
+    widget->render(&painter);
+
+    painter.end();
+
+
+    QMessageBox::information(this, "Success", "Nota saved as PDF!");
+}
+
 

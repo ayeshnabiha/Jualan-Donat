@@ -5,6 +5,11 @@
 #include <QTimer>
 #include <QTime>
 #include <QLabel>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QPainter>
+#include <QFileDialog>
+#include <QMessageBox>
 
 namespace Ui {
 class Nota;
@@ -28,6 +33,7 @@ public:
 private slots:
     void on_pushButton_Print_clicked();
     void updateTime();
+    void saveAsPDF();
 
 private:
     Ui::Nota *ui;
