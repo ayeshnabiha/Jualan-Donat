@@ -57,14 +57,17 @@ void Cart::updateUI()
 
     const auto &orders = OrderManager::instance().getItems();
 
+    int subtotal = 0;
     for (const auto &item : orders) {
         ui->listWidget->addItem(
-            QString("%1 x %2 = %3")
+            QString("%1 x %2 = Rp %3")
                 .arg(item.name)
                 .arg(item.qty)
                 .arg(item.total())
             );
+        subtotal += item.total();
     }
+    ui->label_Subtotal->setText("Subtotal =     Rp " + QString ::number(subtotal));
 }
 
 void Cart::setCustomerName(const QString &name) {

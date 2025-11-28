@@ -30,7 +30,6 @@ public:
 
 
 private slots:
-    void on_pushButton_Print_clicked();
     void updateTime();
     void saveAsPDF();
 

@@ -23,6 +23,9 @@ QT_BEGIN_NAMESPACE
 class Ui_Nota
 {
 public:
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout_3;
+    QWidget *widget_Print;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_Main;
@@ -49,9 +52,17 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(Nota->sizePolicy().hasHeightForWidth());
         Nota->setSizePolicy(sizePolicy);
-        verticalLayoutWidget_2 = new QWidget(Nota);
+        verticalLayoutWidget = new QWidget(Nota);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(30, 24, 301, 401));
+        verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        widget_Print = new QWidget(verticalLayoutWidget);
+        widget_Print->setObjectName("widget_Print");
+        verticalLayoutWidget_2 = new QWidget(widget_Print);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 291, 361));
+        verticalLayoutWidget_2->setGeometry(QRect(0, 0, 301, 361));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(5);
         verticalLayout_2->setObjectName("verticalLayout_2");
@@ -183,10 +194,13 @@ public:
 
         verticalLayout_2->addWidget(label_IG);
 
-        pushButton_Print = new QPushButton(verticalLayoutWidget_2);
+
+        verticalLayout_3->addWidget(widget_Print);
+
+        pushButton_Print = new QPushButton(verticalLayoutWidget);
         pushButton_Print->setObjectName("pushButton_Print");
 
-        verticalLayout_2->addWidget(pushButton_Print);
+        verticalLayout_3->addWidget(pushButton_Print);
 
 
         retranslateUi(Nota);

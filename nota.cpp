@@ -35,11 +35,6 @@ void Nota::updateTime()
     ui->label_Time->setText(timeText);
 }
 
-void Nota::on_pushButton_Print_clicked()
-{
-    this->hide();
-}
-
 void Nota::updateCustomerName()
 {
     std::string name = CustomerName::instance().getName();
@@ -58,7 +53,7 @@ void Nota::updateNota() {
 
     for (const auto &item : orders) {
         QString line = QString("%1x%2 Rp %3\n")
-            .arg(item.name.leftJustified(25))
+            .arg(item.name.leftJustified(24))
             .arg(item.qty,2)
             .arg(item.total(),5);
         text += line;
@@ -68,7 +63,6 @@ void Nota::updateNota() {
     double taxRate = 0.10;
     int tax = subtotal * taxRate;
 
-    // --- HITUNG TOTAL AKHIR ---
     int total = subtotal + tax;
 
     text += "------------------------------------\n";
@@ -84,7 +78,7 @@ void Nota::saveAsPDF() {
     QString fileName = QFileDialog::getSaveFileName(
         this,
         "Save Nota as PDF",
-        "",
+        "nota",
         "PDF Files (*.pdf)"
         );
 
@@ -94,24 +88,33 @@ void Nota::saveAsPDF() {
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setOutputFileName(fileName);
 
-    printer.setPageMargins(QMarginsF(10, 10, 10, 10));
     QPainter painter(&printer);
+    if (!painter.isActive()) return;
 
-    // Ambil FULL tampilan nota
-    QWidget *widget = this;
+    QWidget *widget = ui->widget_Print;
 
     QRectF page = printer.pageRect(QPrinter::DevicePixel);
 
-    double xscale = page.width() / double(widget->width());
-    double yscale = page.height() / double(widget->height());
+    double padding = 40;
+    double usableW = page.width()  - padding * 2;
+    double usableH = page.height() - padding * 2;
+
+    double xscale = usableW / widget->width();
+    double yscale = usableH / widget->height();
     double scale = qMin(xscale, yscale);
 
-    painter.scale(scale, scale);
+    double scaledW = widget->width()  * scale;
+    double scaledH = widget->height() * scale;
 
+    double offsetX = (page.width()  - scaledW) / 2.0;
+    double offsetY = (page.height() - scaledH) / 2.0;
+
+    painter.translate(offsetX, offsetY);
+
+    painter.scale(scale, scale);
     widget->render(&painter);
 
     painter.end();
-
 
     QMessageBox::information(this, "Success", "Nota saved as PDF!");
 }

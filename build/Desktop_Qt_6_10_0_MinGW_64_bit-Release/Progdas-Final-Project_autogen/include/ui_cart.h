@@ -27,6 +27,7 @@ public:
     QLabel *label_CartTag;
     QLabel *label_Empty;
     QListWidget *listWidget;
+    QLabel *label_Subtotal;
     QPushButton *pushButton_Back;
     QPushButton *pushButton_Confirm;
 
@@ -66,6 +67,12 @@ public:
 
         verticalLayout_2->addWidget(listWidget);
 
+        label_Subtotal = new QLabel(verticalLayoutWidget_2);
+        label_Subtotal->setObjectName("label_Subtotal");
+        label_Subtotal->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_2->addWidget(label_Subtotal);
+
         pushButton_Back = new QPushButton(verticalLayoutWidget_2);
         pushButton_Back->setObjectName("pushButton_Back");
 
@@ -88,6 +95,7 @@ public:
         Cart->setWindowTitle(QCoreApplication::translate("Cart", "Form", nullptr));
         label_CartTag->setText(QCoreApplication::translate("Cart", "Let's double check your order!", nullptr));
         label_Empty->setText(QString());
+        label_Subtotal->setText(QString());
         pushButton_Back->setText(QCoreApplication::translate("Cart", "Back", nullptr));
         pushButton_Confirm->setText(QCoreApplication::translate("Cart", "Confirm", nullptr));
     } // retranslateUi
