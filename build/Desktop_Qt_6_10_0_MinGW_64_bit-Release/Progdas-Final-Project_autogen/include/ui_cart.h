@@ -37,7 +37,7 @@ public:
         Cart->resize(295, 369);
         verticalLayoutWidget_2 = new QWidget(Cart);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(30, 60, 231, 221));
+        verticalLayoutWidget_2->setGeometry(QRect(30, 60, 231, 181));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setSpacing(5);
         verticalLayout_2->setObjectName("verticalLayout_2");
@@ -62,7 +62,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(listWidget->sizePolicy().hasHeightForWidth());
         listWidget->setSizePolicy(sizePolicy);
-        listWidget->setMinimumSize(QSize(30, 0));
+        listWidget->setMinimumSize(QSize(25, 25));
 
         verticalLayout_2->addWidget(listWidget);
 

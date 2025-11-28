@@ -35,11 +35,6 @@ void Nota::updateTime()
     ui->label_Time->setText(timeText);
 }
 
-void Nota::setCustomerName(const QString &name)
-{
-    ui->label_CustName->setText(name);
-}
-
 void Nota::on_pushButton_Print_clicked()
 {
     this->hide();
@@ -59,13 +54,13 @@ void Nota::updateNota() {
 
     QString text;
 
-    text += "--------------------------------\n\n";
+    text += "------------------------------------\n";
 
     for (const auto &item : orders) {
-        QString line = QString("%1 x %2   Rp %3\n")
-        .arg(item.name)
-            .arg(item.qty)
-            .arg(item.total());
+        QString line = QString("%1x%2 Rp %3\n")
+            .arg(item.name.leftJustified(25))
+            .arg(item.qty,2)
+            .arg(item.total(),5);
         text += line;
         subtotal += item.total();
     }
@@ -76,10 +71,10 @@ void Nota::updateNota() {
     // --- HITUNG TOTAL AKHIR ---
     int total = subtotal + tax;
 
-    text += "\n-------------------------------\n";
+    text += "------------------------------------\n";
     text += "Subtotal : Rp " + QString::number(subtotal) + "\n";
     text += "Tax (10%): Rp " + QString::number(tax) + "\n";
-    text += "--------------------------------\n";
+    text += "------------------------------------\n";
     text += "TOTAL    : Rp " + QString::number(total) + "\n";
 
     ui->label_Nota->setText(text);

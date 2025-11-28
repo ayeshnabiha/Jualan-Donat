@@ -28,5 +28,4 @@ private:
     MenuOrder *menuOrder;
     Nota *nota;
 };
-
 #endif // MAINWINDOW_H

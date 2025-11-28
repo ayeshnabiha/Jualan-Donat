@@ -15,7 +15,6 @@ class Payment : public QWidget
 public:
     explicit Payment(QWidget *parent = nullptr);
     ~Payment();
-    void setCustomerName(const QString &name);
     void setNota(Nota *ptr);
 
 private slots:
@@ -23,7 +22,6 @@ private slots:
 
 private:
     Ui::Payment *ui;
-    QString customerName;
     Nota *nota;
 };
 

@@ -22,7 +22,6 @@ MenuOrder::MenuOrder(QWidget *parent)
             QString menuName = parts[0];
             QString price = parts[1];
 
-            // --- Buat widget container ---
             QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
             QWidget *rowWidget = new QWidget;
 
@@ -32,10 +31,9 @@ MenuOrder::MenuOrder(QWidget *parent)
             QLabel *labelPrice = new QLabel("Rp " + price);
             labelPrice->setFixedWidth(80);
 
-            // SpinBox qty menu
             QSpinBox *spin = new QSpinBox;
             spin->setRange(0, 10);
-            spin->setFixedWidth(50);
+            spin->setFixedWidth(60);
 
             nameLabels.append(labelName);
             priceLabels.append(labelPrice);
@@ -49,14 +47,12 @@ MenuOrder::MenuOrder(QWidget *parent)
 
             rowWidget->setLayout(layout);
 
-            // --- Masukkan widget ke dalam list widget ---
             item->setSizeHint(rowWidget->sizeHint());
 
             ui->listWidget->setItemWidget(item, rowWidget);
         }
     }
 
-    cart = new Cart();
 }
 
 MenuOrder::~MenuOrder()
@@ -80,9 +76,9 @@ void MenuOrder::on_pushButton_OK_clicked()
 
             item.name = nameLabels[i]->text();
 
-            QString p = priceLabels[i]->text();   // Contoh: "Rp 15000"
-            p.remove("Rp ");                      // Jadi: "15000"
-            item.price = p.toInt();               // 15000 (benar)
+            QString p = priceLabels[i]->text();
+            p.remove("Rp ");
+            item.price = p.toInt();
 
             item.qty = qty;
 
@@ -98,5 +94,5 @@ void MenuOrder::on_pushButton_OK_clicked()
 void MenuOrder::updateCustomerName()
 {
     std::string name = CustomerName::instance().getName();
-    ui->label_WelcomeTag->setText("Hi " + QString::fromStdString(name) + "! What would you like today?");
+    ui->label_WelcomeTag->setText("Hi " + QString::fromStdString(name) + "! What would you like to order today?");
 }

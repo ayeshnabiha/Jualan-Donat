@@ -14,6 +14,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -27,10 +28,12 @@ public:
     QLabel *label_Main;
     QLabel *label_Adress;
     QLabel *label_Time;
+    QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_Cust;
     QLabel *label_CustName;
     QLabel *label_Nota;
+    QSpacerItem *horizontalSpacer_2;
     QLabel *label_Tag;
     QLabel *label_Tag2;
     QLabel *label_IG;
@@ -40,21 +43,26 @@ public:
     {
         if (Nota->objectName().isEmpty())
             Nota->setObjectName("Nota");
-        Nota->resize(354, 395);
+        Nota->resize(354, 484);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(Nota->sizePolicy().hasHeightForWidth());
+        Nota->setSizePolicy(sizePolicy);
         verticalLayoutWidget_2 = new QWidget(Nota);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 291, 331));
+        verticalLayoutWidget_2->setGeometry(QRect(30, 30, 291, 361));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
-        verticalLayout_2->setSpacing(1);
+        verticalLayout_2->setSpacing(5);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         label_Main = new QLabel(verticalLayoutWidget_2);
         label_Main->setObjectName("label_Main");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Maximum);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_Main->sizePolicy().hasHeightForWidth());
-        label_Main->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Maximum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(label_Main->sizePolicy().hasHeightForWidth());
+        label_Main->setSizePolicy(sizePolicy1);
         label_Main->setMinimumSize(QSize(0, 30));
         QFont font;
         font.setFamilies({QString::fromUtf8("Palatino Linotype")});
@@ -66,8 +74,8 @@ public:
 
         label_Adress = new QLabel(verticalLayoutWidget_2);
         label_Adress->setObjectName("label_Adress");
-        sizePolicy.setHeightForWidth(label_Adress->sizePolicy().hasHeightForWidth());
-        label_Adress->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_Adress->sizePolicy().hasHeightForWidth());
+        label_Adress->setSizePolicy(sizePolicy1);
         label_Adress->setMinimumSize(QSize(0, 20));
         label_Adress->setFont(font);
         label_Adress->setFrameShape(QFrame::Shape::NoFrame);
@@ -78,22 +86,30 @@ public:
 
         label_Time = new QLabel(verticalLayoutWidget_2);
         label_Time->setObjectName("label_Time");
-        sizePolicy.setHeightForWidth(label_Time->sizePolicy().hasHeightForWidth());
-        label_Time->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_Time->sizePolicy().hasHeightForWidth());
+        label_Time->setSizePolicy(sizePolicy1);
         label_Time->setMinimumSize(QSize(0, 15));
         label_Time->setFont(font);
         label_Time->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout_2->addWidget(label_Time);
 
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        verticalLayout_2->addItem(horizontalSpacer);
+
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setSizeConstraint(QLayout::SizeConstraint::SetNoConstraint);
         label_Cust = new QLabel(verticalLayoutWidget_2);
         label_Cust->setObjectName("label_Cust");
-        sizePolicy.setHeightForWidth(label_Cust->sizePolicy().hasHeightForWidth());
-        label_Cust->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Maximum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label_Cust->sizePolicy().hasHeightForWidth());
+        label_Cust->setSizePolicy(sizePolicy2);
         label_Cust->setMinimumSize(QSize(0, 20));
+        label_Cust->setMaximumSize(QSize(200, 16777215));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Courier New")});
         font1.setPointSize(10);
@@ -104,11 +120,11 @@ public:
 
         label_CustName = new QLabel(verticalLayoutWidget_2);
         label_CustName->setObjectName("label_CustName");
-        sizePolicy.setHeightForWidth(label_CustName->sizePolicy().hasHeightForWidth());
-        label_CustName->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_CustName->sizePolicy().hasHeightForWidth());
+        label_CustName->setSizePolicy(sizePolicy1);
         label_CustName->setMinimumSize(QSize(0, 20));
         label_CustName->setFont(font1);
-        label_CustName->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_CustName->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         horizontalLayout_2->addWidget(label_CustName);
 
@@ -117,20 +133,24 @@ public:
 
         label_Nota = new QLabel(verticalLayoutWidget_2);
         label_Nota->setObjectName("label_Nota");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(label_Nota->sizePolicy().hasHeightForWidth());
-        label_Nota->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_Nota->sizePolicy().hasHeightForWidth());
+        label_Nota->setSizePolicy(sizePolicy3);
         label_Nota->setMinimumSize(QSize(0, 100));
         label_Nota->setFont(font1);
 
         verticalLayout_2->addWidget(label_Nota);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        verticalLayout_2->addItem(horizontalSpacer_2);
+
         label_Tag = new QLabel(verticalLayoutWidget_2);
         label_Tag->setObjectName("label_Tag");
-        sizePolicy.setHeightForWidth(label_Tag->sizePolicy().hasHeightForWidth());
-        label_Tag->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_Tag->sizePolicy().hasHeightForWidth());
+        label_Tag->setSizePolicy(sizePolicy1);
         label_Tag->setMinimumSize(QSize(0, 15));
         label_Tag->setFont(font);
         label_Tag->setFrameShape(QFrame::Shape::NoFrame);
@@ -141,8 +161,8 @@ public:
 
         label_Tag2 = new QLabel(verticalLayoutWidget_2);
         label_Tag2->setObjectName("label_Tag2");
-        sizePolicy.setHeightForWidth(label_Tag2->sizePolicy().hasHeightForWidth());
-        label_Tag2->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_Tag2->sizePolicy().hasHeightForWidth());
+        label_Tag2->setSizePolicy(sizePolicy1);
         label_Tag2->setMinimumSize(QSize(0, 15));
         label_Tag2->setFont(font);
         label_Tag2->setFrameShape(QFrame::Shape::NoFrame);
@@ -153,8 +173,8 @@ public:
 
         label_IG = new QLabel(verticalLayoutWidget_2);
         label_IG->setObjectName("label_IG");
-        sizePolicy.setHeightForWidth(label_IG->sizePolicy().hasHeightForWidth());
-        label_IG->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_IG->sizePolicy().hasHeightForWidth());
+        label_IG->setSizePolicy(sizePolicy1);
         label_IG->setMinimumSize(QSize(0, 15));
         label_IG->setFont(font);
         label_IG->setFrameShape(QFrame::Shape::NoFrame);

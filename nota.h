@@ -25,7 +25,6 @@ class Nota : public QWidget
 public:
     explicit Nota(QWidget *parent = nullptr);
     ~Nota();
-    void setCustomerName(const QString &name);
     void updateCustomerName();
     void updateNota();
 

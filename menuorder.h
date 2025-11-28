@@ -13,7 +13,6 @@ namespace Ui
 }
 
 class Cart;
-class Nota;
 class CustomerName;
 class OrderManager;
 class MenuOrder : public QWidget
@@ -32,7 +31,6 @@ private slots:
 private:
     Ui::MenuOrder *ui;
     Cart *cart;
-    Nota *nota;
     QVector<QLabel*> nameLabels;
     QVector<QLabel*> priceLabels;
     QVector<QSpinBox*> qtySpinBoxes;
